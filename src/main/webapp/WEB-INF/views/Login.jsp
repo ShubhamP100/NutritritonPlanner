@@ -78,54 +78,30 @@
 <body>
 
 <div class="container">
-   <h2>Sign-up</h2> 
+   <h2>Login</h2>
    
-   <form action="saveuser" method="post"> 
+   <form action="saveuser" method="post">
       
-      <div class="form-group">
-         <label for="firstname">First Name</label>
-         <input type="text" placeholder="Enter the first name" id="firstname" name="firstname">
-      </div>
+      
 
       <div class="form-group">
-         <label for="lastname">Last Name</label>
-         <input type="text" placeholder="Enter the last name" id="lastname" name="lastname">
-      </div>
-
-      <div class="form-group">
-         <label for="email">Email</label>
+         <label for="email">Email</label>  
          <input type="text" placeholder="Enter your email" id="email" name="email">
       </div>
 
-      <div class="form-group">
-         <label for="password">Password</label>
-         <input type="password" placeholder="Enter your password" id="password" name="password">
+      <div class="form-group"> 
+         <label for="password">Password</label> 
+         <input type="password" placeholder="Enter your password" id="password" name="password"> 
       </div>
 
-      <div class="form-group">
-         <label for="confirm-password">Confirm Password</label>
-         <input type="password" placeholder="Re-enter your password" id="confirm-password" name="confirm-password">
-      </div>
-
-      <div class="form-group">
-         <label>Gender</label>
-         <div class="gender-group">
-            <input type="radio" name="gender" value="male"> Male
-            <input type="radio" name="gender" value="female"> Female
-            <input type="radio" name="gender" value="other"> Other
-         </div>
-      </div>
-
-      <div class="form-group">
-         <label for="city">City</label>
-         <input type="text" placeholder="Enter your city" id="city" name="city">
-      </div>
-
-      <button  type="submit" class="btn">Sign Up</button>
      
+
       
-   </form> 
-   <a href="login">Login</a> 
+      
+      <button type="submit" class="btn">Login</button> 
+      <p>Don't have an account? <a href="signup">Sign up</a></p>
+     </form>
+      <a href="forgetpassword">Forget password</a> 
 </div>
 
 </body>
