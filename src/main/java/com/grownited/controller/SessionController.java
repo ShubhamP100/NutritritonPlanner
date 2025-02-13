@@ -18,7 +18,7 @@ public class SessionController {
     	return "Login";
     }
     @PostMapping("saveuser")      
-    	public String saveuser(UserEntity user  ) {
+    	public String saveuser(UserEntity  user  ) {
     	         System.out.println(user.getFirstname());
     	         System.out.println(user.getEmail());
     	         System.out.println(user.getGender());
