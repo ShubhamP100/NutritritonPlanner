@@ -12,11 +12,11 @@ import com.grownited.entity.*;
 
 public class StateController {
    
-	   @GetMapping("newstate") 
+	   @GetMapping("newstate") // url pe jo dikega vo 
 	   public String newsstate() { 
-		   return "NewState";  
-	   }
-	   @PostMapping("savestate")
+		   return "NewState"; // returns the jsp file 
+	   } 
+	   @PostMapping("savestate") 
 		   public String statesave(StateEntity state) {
 		   System.out.println(state.getState());
 		   return "NewState";

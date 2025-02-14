@@ -10,8 +10,8 @@
        <h2>
           Please enter your state 
        </h2>
-       <form action="savestate" method="post">
-            State Name:<input type="text" name="state"/>
+       <form action="savestate" method="post"> 
+            State Name:<input type="text" name="state"/><br><br>
             <button type="submit">submit</button>
            
        
