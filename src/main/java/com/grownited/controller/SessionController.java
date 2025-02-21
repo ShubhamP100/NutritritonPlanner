@@ -6,15 +6,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import com.grownited.entity.*;
 import com.grownited.repository.UserRepo;
+import com.grownited.service.Mailservice;
 
 @Controller
-
-
 
 public class SessionController { 
 	
 	@Autowired
+	Mailservice serviceMail;
+	
+	
+	@Autowired
 	UserRepo repositoryuser;
+	
 	
     @GetMapping ("signup")// for the routing   -> url 
 	public String signup() {
@@ -25,16 +29,16 @@ public class SessionController {
     	return "Login";
     }
     @PostMapping("saveuser")       
-    	public String saveuser(UserEntity  user  ) { 
+    	public String saveuser(UserEntity userEntity) { 
     	        /* System.out.println(user.getFirstname());
     	         System.out.println(user.getEmail());
     	         System.out.println(user.getGender());
     	         */
-    	         user.setRole("User");//
+    	         userEntity.setRole("User");//
     	         //user.setCreatedAt(new Date());
-    	 		 user.setActive(true);
-    	 		 repositoryuser.save(user);//insert query 
-    	          
+    	        // repositoryuser.setActive(true); 
+    	 		 repositoryuser.save(userEntity);//insert query 
+    	 	     serviceMail.sendWelcomeMail(userEntity.getEmail(), userEntity.getFirstname());
                 return "SaveUser";		
     	} 
     @GetMapping("forgetpassword")

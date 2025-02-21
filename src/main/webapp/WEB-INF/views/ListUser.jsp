@@ -1,13 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>USer data</title>
+<title>User data</title>
 </head>
 <body>
     <h2>List of User</h2>
@@ -19,7 +18,6 @@
 			<th>Weight</th>
 			<th>Health Goal</th>
 			<th>Medical Condition</th>
-			<th>Created At</th>
 			<th>Activity Level</th>
 		</tr>
 		
@@ -29,8 +27,7 @@
 				<td>${v.height}</td>
 				<td>${v.weight}</td>
 				<td>${v.healthGoal}</td>
-				<td>${v.medicalCondition}</td>
-				
+				<td>${v.medicalcondition}</td> 
 				<td>${v.activityLevel}</td>
 			</tr>
 		</c:forEach>

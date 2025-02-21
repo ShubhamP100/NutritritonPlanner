@@ -52,7 +52,7 @@
 <body>
 
     <div class="form-container">
-        <form action="save" method="POST">
+        <form action="saveuserss" method="POST"> 
             <label for="age">Age:</label>
             <input type="text" id="age" name="age" placeholder="Enter your age" required>
 
@@ -63,16 +63,15 @@
             <input type="text" id="weight" name="weight" placeholder="Enter your weight" required>
 
             <label for="health_goal">Health Goal:</label>
-            <input type="text" id="health_goal" name="health_goal" placeholder="Enter your health goal" required>
+            <input type="text" id="health_goal" name="healthGoal" placeholder="Enter your health goal" required>
 
             <label for="medical_conditions">Medical Conditions:</label>
-            <input type="text" id="medical_conditions" name="medical_conditions" placeholder="Enter your medical condition" required>
+            <input type="text" id="medical_conditions" name="medicalcondition" placeholder="Enter your medical condition" required>
 
-            <label for="created_at">Created At:</label>
-            <input type="date" id="created_at" name="created_at" required>
+            
 
             <label for="activity_level">Activity Level:</label>
-            <input type="text" id="activity_level" name="activity_level" placeholder="Enter your activity level" required>
+            <input type="text" id="activity_level" name="activityLevel" placeholder="Enter your activity level" required>
 
             <button type="submit">Submit</button> 
         </form>

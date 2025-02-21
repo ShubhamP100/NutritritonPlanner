@@ -22,8 +22,8 @@ public class RegesterEntity  {
 		 private Float height;
 		 private Float weight;
 		 private String healthGoal;
-		 private String medical_conditions;
-		 private Date  createdAt;
+		 private String medicalcondition;
+		
 		 private String activityLevel;
 		public Integer getUser_detail_id() {
 			return user_detail_id;
@@ -61,19 +61,15 @@ public class RegesterEntity  {
 		public void setHealthGoal(String healthGoal) {
 			this.healthGoal = healthGoal;
 		}
-		public String getMedical_conditions() {
-			return medical_conditions;
+		
+		
+		public String getMedicalcondition() {
+			return medicalcondition;
 		}
-		public void setMedical_conditions(String medical_conditions) {
-			this.medical_conditions = medical_conditions;
+		public void setMedicalcondition(String medicalcondition) {
+			this.medicalcondition = medicalcondition;
 		}
 		
-		public Date getCreatedAt() {
-			return createdAt;
-		}
-		public void setCreatedAt(Date createdAt) {
-			this.createdAt = createdAt;
-		}
 		public String getActivityLevel() {
 			return activityLevel;
 		}
