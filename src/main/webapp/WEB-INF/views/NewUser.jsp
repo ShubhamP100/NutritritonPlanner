@@ -52,7 +52,7 @@
 <body>
 
     <div class="form-container">
-        <form action="saveuserss" method="POST"> 
+        <form action="saveusers" method="POST"> 
             <label for="age">Age:</label>
             <input type="text" id="age" name="age" placeholder="Enter your age" required>
 

@@ -7,7 +7,7 @@ import jakarta.persistence.Table;
 
 import java.sql.Date;
 @Entity
-@Table(name="Registeruser")
+@Table(name="Registeruser") 
 
 public class RegesterEntity  {
 	
@@ -16,7 +16,7 @@ public class RegesterEntity  {
 		 @Id
 		 @GeneratedValue(strategy = GenerationType.IDENTITY) // to generate the integer id 
 		 
-		 private Integer user_detail_id;
+		 private Integer userdetailid;
 		 private Integer userId;//fk
 		 private Integer age;
 		 private Float height;
@@ -26,10 +26,10 @@ public class RegesterEntity  {
 		
 		 private String activityLevel;
 		public Integer getUser_detail_id() {
-			return user_detail_id;
+			return userdetailid;
 		}
-		public void setUser_detail_id(Integer user_detail_id) {
-			this.user_detail_id = user_detail_id;
+		public void setUser_detail_id(Integer userdetailid) {
+			this.userdetailid = userdetailid;
 		}
 		public Integer getUserId() {
 			return userId;
@@ -78,5 +78,6 @@ public class RegesterEntity  {
 		}
 		
 	}
+
 
 

@@ -1,8 +1,7 @@
-
 package com.grownited.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import com.grownited.entity.*;
@@ -20,8 +19,11 @@ public class SessionController {
 	@Autowired
 	UserRepo repositoryuser;
 	
+	@Autowired 
+	PasswordEncoder encoder;
 	
-    @GetMapping ("signuppage")// for the routing   -> url 
+	
+    @GetMapping ("signup")// for the routing   -> url 
 	public String signup() {
 		  return "Signup";  // returns the jsp file
 	}
@@ -34,7 +36,11 @@ public class SessionController {
     	        /* System.out.println(user.getFirstname());
     	         System.out.println(user.getEmail());
     	         System.out.println(user.getGender());
+    	         
     	         */
+    	         String encPassword = encoder.encode(userEntity.getPassword());
+    	         userEntity.setPassword(encPassword);
+    	
     	         userEntity.setRole("User");//
     	         //user.setCreatedAt(new Date());
     	        // repositoryuser.setActive(true); 
@@ -42,9 +48,6 @@ public class SessionController {
     	 	     serviceMail.sendWelcomeMail(userEntity.getEmail(), userEntity.getFirstname());
                 return "SaveUser";		
     	} 
-    
-    
-    
     @GetMapping("forgetpassword")
     public String forgetpassword() {
     	return "ForgetPassword";

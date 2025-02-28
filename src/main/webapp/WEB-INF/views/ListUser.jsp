@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -10,8 +9,8 @@
 </head>
 <body>
     <h2>List of User</h2>
-
-	<table border="1">
+    
+    	<table border="1">
 		<tr>
 			<th>Age</th>
 			<th>Height</th>
@@ -29,8 +28,14 @@
 				<td>${v.healthGoal}</td>
 				<td>${v.medicalcondition}</td> 
 				<td>${v.activityLevel}</td>
+		 		<td><a href="viewmember?userdetailid=${v.userdetailid}">view  </a>|<a href="deletemember?userdetailid=${v.userdetailid}">Delete  </a> </td> 
+		 		
+		
 			</tr>
+			
+			
 		</c:forEach>
 	</table>
+    
 </body>
 </html>
